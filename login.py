@@ -59,4 +59,4 @@ driver.find_element(By.CLASS_NAME, 'submitbtn').click()
 time.sleep(5)
 print (driver.title)
 
-
+send_msg('预约成功')
