@@ -17,7 +17,7 @@ from selenium.webdriver.common.by import By
 
 def send_msg(text):
     token = "5328731820:AAHvX5Hz5TJPDN9zQfBAwYMynW1H_E9guIg"
-    chat_id = "-1780590285"
+    chat_id = "@moonlit"
     bot = telegram.Bot(token=token)
     bot.sendMessage(chat_id=chat_id, text=text)
         
