@@ -4,6 +4,8 @@ import os
 import time
 from libhustpass import main
 import sys
+import telegram
+
 
 ticket = main.doLogin(os.environ['USERNAME'],os.environ['PASSWORD'],"http://access.hust.edu.cn/IDKJ-P/P/studentApi")
 print(os.environ['USERNAME'],os.environ['PASSWORD'])
@@ -13,6 +15,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
+def send_msg(text):
+    token = "5328731820:AAHvX5Hz5TJPDN9zQfBAwYMynW1H_E9guIg"
+    chat_id = "-1780590285"
+    bot = telegram.Bot(token=token)
+    bot.sendMessage(chat_id=chat_id, text=text)
+        
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 options.add_argument('--no-sandbox')
