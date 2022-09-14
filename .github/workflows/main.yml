@@ -65,6 +65,7 @@ jobs:
           pip install Pillow
           pip install selenium
           pip install requests
+          pip install python-telegram-bot
       - name: Start Login
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
